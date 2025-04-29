@@ -53,6 +53,8 @@ The project uses three main data files:
   - Younger and lower-income customers have the lowest engagement and spend.
   - The model is effective at identifying likely offer responders but less so at identifying non-responders, indicating class imbalance.
 
+More discussion of the results is given in the blog postv[here](https://abdualazem-fadol.medium.com/the-starbucks-rewards-experiment-surprising-trends-in-customer-behaviour-tell-f7def0067d63).
+
 ---
 
 ## Acknowledgments
