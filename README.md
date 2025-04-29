@@ -23,12 +23,42 @@ This project analyses simulated data from the Starbucks rewards mobile app to de
 | `data/transcript.json`           | Transaction and offer event records                                         |
 | `README.md`                      | Project overview and documentation                                          |
 
+## Data Description
+
+The project uses three main data files:
+
+- **portfolio.json**: Contains offer ids and meta data about each offer (duration, type, reward, difficulty, channels).
+- **profile.json**: Contains demographic data for each customer (age, gender, income, date joined).
+- **transcript.json**: Contains records for transactions, offers received, offers viewed, and offers completed, including timestamps and amounts.
+
 ## Summary of Results
 
 - Explored and cleaned the Starbucks app data, addressing missing values and data inconsistencies.
 - Analysed customer demographics and offer response patterns.
 - Built models/heuristics to predict offer response and optimise offer targeting.
-- Key findings: [Add your main findings here after analysis, e.g., "Younger customers respond better to BOGO offers, while higher-income groups prefer discounts."]
+- **Customer Segmentation:**  
+  Used KMeans clustering to segment customers based on age, income, membership duration, total spend, and offer engagement.  
+  Four segments were identified:
+    - **Segment 0:** Older, higher-income, long-tenured, high spend and engagement.  
+      *Target with premium offers, loyalty rewards, and exclusive deals.*
+    - **Segment 1:** Middle-aged, moderate-income, longest-tenured, moderate spend and engagement.  
+      *Target with retention campaigns and personalized offers.*
+    - **Segment 2:** Older, higher-income, shorter-tenured, lower spend and engagement.  
+      *Target with onboarding and engagement strategies.*
+    - **Segment 3:** Younger, lower-income, shortest-tenured, lowest spend and engagement.  
+      *Target with introductory offers, discounts, and educational content.*
+
+- **Key findings:**  
+  - Long-tenured, high-income customers are the most engaged and spend the most.
+  - Younger and lower-income customers have the lowest engagement and spend.
+  - The model is effective at identifying likely offer responders but less so at identifying non-responders, indicating class imbalance.
+
+---
+
+## Acknowledgments
+
+- The data used in this project was provided by Starbucks and Udacity for educational purposes as part of the Udacity Data Scientist Nanodegree Capstone.
+- Special thanks to Udacity, Starbucks, and the open-source Python community for their tools and resources.
 
 ---
 
